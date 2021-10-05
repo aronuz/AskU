@@ -12,4 +12,3 @@ def add_slug_to_question(sender, instance, *args, **kwargs):
         slug = slugify(instance.content)
         random_string = get_random_string(length=8)
         instance.slug = '{}-{}'.format(slug, random_string)
-        
