@@ -3,6 +3,8 @@
 @email=email@user.com
 @password=pas3w0r6
 @token=443b889b27d1e7238b49f41181ae35fd58802b96
+@slug=???
+@uuid=???
 
 ### Create new account
 POST {{host}}/auth/users/
@@ -29,3 +31,23 @@ Content-Type: application/json
 ### Logout
 POST {{host}}/auth/token/logout/
 Authorization: token {{token}}
+
+### Get answers list
+GET {{host}}/api/v1/questions/{{slug}}/answers/
+Authorization: Token {{token}}
+
+### Create answer
+GET {{host}}/api/v1/questions/{{slug}}/answer/
+Authorization: Token {{token}}
+
+### Get answer detail
+GET {{host}}/api/v1/answer/{{uuid}}/
+Authorization: Token {{token}}
+
+### Post like
+GET {{host}}/api/v1/answer/{{uuid}}/like/
+Authorization: Token {{token}}
+
+### Remove like
+GET {{host}}/api/v1/answer/{{uuid}}/like/1/
+Authorization: Token {{token}}
